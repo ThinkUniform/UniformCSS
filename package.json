@@ -1,0 +1,34 @@
+{
+  "name": "uniformcss",
+  "version": "0.9.0",
+  "description": "A fully configurable utility class generator and CSS framework built for Sass projects.",
+  "main": "sass/uniform.sass",
+  "scripts": {
+    "uniform:compile": "sass --load-path=./sass --no-source-map sass/main.scss css/uniform.css",
+    "uniform:compress": "sass --load-path=./sass --no-source-map sass/main.scss css/uniform.min.css --style compressed",
+    "uniform:watch": "sass --load-path=./sass --no-source-map --watch sass/main.scss css/uniform.css",
+    "uniform:watch-compressed": "sass --load-path=./sass --no-source-map --watch sass/main.scss css/uniform.min.css --style compressed",
+    "uniform:purgecss": "purgecss -c purgecss.config.js -o css/",
+    "uniform": "npm run uniform:compress && npm run uniform:purgecss"
+  },
+  "keywords": [
+    "css",
+    "sass",
+    "functional css",
+    "atomic css",
+    "responsive css",
+    "utility first",
+    "uniformcss"
+  ],
+  "author": {
+    "name": "Jin Su Park",
+    "email": "jinsupark@icloud.com",
+    "url": "https://jinsupark.com/"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.33.0",
+    "postcss-cli": "^7.1.0",
+    "purgecss": "^3.0.0"
+  }
+}
